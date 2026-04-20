@@ -5,7 +5,7 @@ The goal of this project is to build an end-to-end data pipeline on Google Cloud
 
 ## Problem Statement
 - **Dataset**: [Chicago Crimes (2001 to present)](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2/about_data) – reported incidents of crime in Chicago, excluding the most recent seven days.
-- **Data scope**: January 1, 2020 – March 30, 2026 (downloaded data by year).
+- **Data scope**: January 1, 2020 – March 30, 2026 (downloaded data by year, (https://github.com/joyeli25/DE_Zoomcamp_Project_2025-26/releases/tag/crime-data)).
 - **Pipeline type**: 
   - Batch processing (historical data ingestion)
   - Streaming processing (real-time crime events)
@@ -103,7 +103,7 @@ The goal of this project is to build an end-to-end data pipeline on Google Cloud
 - Clean and standardize schema
 - Remove invalid or incomplete records
 - Build analytical models:
-  - `fact_chi_crimes`
+  - `fact_crimes`
 - Implement:
   - Incremental models (aligned with partitions)
   - Data quality tests
@@ -114,11 +114,10 @@ The goal of this project is to build an end-to-end data pipeline on Google Cloud
 
 - KPI scorecards:
   - Total incidents
-  - Arrest rate
+  - Total Arrest
+  - Overall Arrest Rate
 - Time series:
-  - Monthly crime trends
-- Category breakdown:
-  - Top crime types
+  - Yearly crime trends
 
 **Tier 2: Detailed Dashboard**
 
