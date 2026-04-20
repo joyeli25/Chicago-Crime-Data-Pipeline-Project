@@ -17,8 +17,8 @@ tasks:
     tasks:
       - id: clone_repository
         type: io.kestra.plugin.git.Clone
-        url: https://github.com/joyeli25/DE_Zoomcamp_Project_2025-26
-        branch: v2026
+        url: https://github.com/joyeli25/Chicago-Crime-Data-Pipeline-Project
+        branch: main
 
       - id: dbt-build
         type: io.kestra.plugin.dbt.cli.DbtCLI
@@ -28,10 +28,10 @@ tasks:
         taskRunner:
           type: io.kestra.plugin.scripts.runner.docker.Docker
         commands:
-          - dbt deps --project-dir Project/03_dbt_Data_Transformation/chi_crime_project
-          - dbt seed --target dev --project-dir Project/03_dbt_Data_Transformation/chi_crime_project
-          - dbt run --target dev --project-dir Project/03_dbt_Data_Transformation/chi_crime_project
-          - "{{ inputs.dbt_command }} --project-dir Project/03_dbt_Data_Transformation/chi_crime_project"
+          - dbt deps --project-dir 05_dbt_Data_Transformation/chi_crime_project
+          - dbt seed --target dev --project-dir 05_dbt_Data_Transformation/chi_crime_project
+          - dbt run --target dev --project-dir 05_dbt_Data_Transformation/chi_crime_project
+          - "{{ inputs.dbt_command }} --project-dir 05_dbt_Data_Transformation/chi_crime_project"
         profiles: |
           default:
             outputs:
