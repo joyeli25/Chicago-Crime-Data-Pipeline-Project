@@ -1,3 +1,19 @@
+
+*/proj-creds.json
+
+**/.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+*.json
+*.key
+*.pem
+*.p12
+credentials*
+.envproj-creds.json
+*.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
